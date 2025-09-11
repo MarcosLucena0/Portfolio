@@ -1,0 +1,41 @@
+.navbar {
+  position: fixed; /*Deixa o menu fixo*/
+  top: 20px;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  background: rgba(34, 34, 34, 0.548);
+  padding: 20px 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  z-index: 100;
+
+  /* Efeito de vidro fosco */
+  backdrop-filter: blur(10px);
+  /* Compatibilidade Safari */
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Para dar um contorno mais visível */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #85a4a8d3;
+}
+
+
+/* Esconder o menu em telas pequenas */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+

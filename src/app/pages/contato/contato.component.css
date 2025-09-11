@@ -1,0 +1,145 @@
+.contato {
+  padding: 60px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contato p {
+  font-size: 1.1rem;
+  color: #cfcdcd;
+  margin-bottom: 30px;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.info-item {
+  background: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: #3d5a5ed3; /* cor padrão ícones */
+  margin-right: 10px;
+}
+
+
+.info-item span {
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+}
+
+.link-acao {
+  font-size: 0.9rem;
+  color: white;
+  background: #42666bd3;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link-acao:hover {
+  background: #243436d3;
+}
+
+.contato-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.contato-links a {
+  font-size: 2rem;
+  color: #85a4a8d3;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contato-links a:hover {
+  transform: scale(1.1);
+  color: #3d5a5ed3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contato {
+    padding: 40px 15px;
+  }
+
+  .contato h2 {
+    font-size: 1.8rem;
+  }
+
+  .contato p {
+    font-size: 1rem;
+  }
+
+  .contato-info {
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .info-item {
+    padding: 12px 15px;
+  }
+
+  .info-item i {
+    font-size: 1.4rem;
+  }
+
+  .info-item span {
+    font-size: 0.95rem;
+  }
+
+  .link-acao {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato h2 {
+    font-size: 1.6rem;
+  }
+
+  .contato-info {
+    gap: 12px;
+  }
+
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .info-item span {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .link-acao {
+    width: 100%;
+    text-align: center;
+  }
+}
+

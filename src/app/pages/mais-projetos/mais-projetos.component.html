@@ -1,0 +1,33 @@
+<section id="mais-projetos" class="mais-projetos">
+  <h2>Projetos</h2>
+  <div class="container-projetos">
+    <div class="card" *ngFor="let projeto of maisprojetos" (click)="abrirModal(projeto)">
+      <img [src]="projeto.img" [alt]="projeto.title" />
+      <div class="card-overlay">{{ projeto.title }}</div>
+    </div>
+  </div>
+
+
+  <!-- Botão de voltar -->
+  <div class="container-voltar">
+    <button class="voltar" [routerLink]="['/']">⬅ Voltar para página principal</button>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal" *ngIf="modalAberto">
+  <div class="modal-background" (click)="fecharModal()"></div>
+  <div class="modal-content">
+    <span class="close" (click)="fecharModal()">&times;</span>
+    <img [src]="projetoSelecionado?.img" [alt]="projetoSelecionado?.title">
+    <h3>{{ projetoSelecionado?.title }}</h3>
+    <p>{{ projetoSelecionado?.desc }}</p>
+    <br>
+    <p>{{ projetoSelecionado?.tecs }}</p>
+    <div class="modal-links">
+      <a [href]="projetoSelecionado?.github" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a [href]="projetoSelecionado?.site" target="_blank"><i class="fa-solid fa-eye"></i></a>
+    </div>
+  </div>
+</div>
+

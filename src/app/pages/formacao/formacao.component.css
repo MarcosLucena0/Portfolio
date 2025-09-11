@@ -1,0 +1,139 @@
+.formacao {
+  padding: 150px 20px;
+  text-align: center;
+  background: #111;
+  color: white;
+  width: 100%;
+}
+
+.formacao h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  padding: 10px 0;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.carousel-item {
+  flex: 0 0 calc(25% - 16px);  position: relative;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgb(24, 60, 114));
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  border-radius: 0 0 12px 12px;
+  transition: opacity 0.3s;
+}
+
+.carousel-item:hover .overlay {
+  opacity: 1;
+}
+
+.btn-nav {
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: 0.3s, transform 0.2s;
+}
+
+.btn-nav:hover {
+  background: rgba(0,0,0,0.7);
+  transform: scale(1.1);
+}
+
+.left {
+  position: absolute;
+  left: -35px;
+}
+
+.right {
+  position: absolute;
+  right: -35px;
+}
+
+/* Responsividade */
+
+@media (max-width: 992px) {
+  .carousel-item {
+    flex: 0 0 calc(50% - 16px); /* 2 imagens */
+  }
+}
+
+/* Celular */
+@media (max-width: 576px) {
+  .carousel-item {
+    flex: 0 0 100%; /* 1 imagem */
+  }
+  .carousel-item img {
+    height: 200px; /* aumenta no celular para melhor visualização */
+  }
+  .btn-nav {
+    font-size: 1.5rem;
+    padding: 5px 8px;
+  }
+  .left {
+    left: -25px;
+  }
+  .right {
+    right: -25px;
+  }
+}
+
+/* Mini celulares */
+@media (max-width: 400px) {
+  .formacao h2 {
+    font-size: 1.5rem;
+  }
+  .carousel-item img {
+    height: 180px;
+  }
+}

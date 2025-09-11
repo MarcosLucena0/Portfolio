@@ -1,0 +1,18 @@
+<section id="formacao" class="formacao">
+  <h2>Formação</h2>
+
+  <div class="carousel-wrapper">
+    <button class="btn-nav left" (click)="anterior()">&#10094;</button>
+
+    <div #carouselContainer class="carousel-container">
+      <div class="carousel-item" *ngFor="let cert of certificados">
+        <img [src]="cert.img" [alt]="cert.titulo">
+        <div class="overlay">{{ cert.titulo }}</div>
+      </div>
+    </div>
+
+    <button class="btn-nav right" (click)="proximo()">&#10095;</button>
+  </div>
+</section>
+
+
