@@ -21,8 +21,8 @@
 }
 
 .sobre-imagem img {
-  width: 300px;
-  height: 330px;
+  width: 350px;
+  height: 400px;
   object-fit: cover;
   border-radius: 30px;
   box-shadow: 0 4px 15px rgba(108, 145, 155, 0.89);
